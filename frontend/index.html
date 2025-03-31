@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Code Generator with Live Preview</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>AI Code Generator</h1>
+      <p>Describe what you want to build and get instant code with live preview</p>
+    </div>
+    
+    <div class="main-content">
+      <div class="input-section">
+        <div class="form-group">
+          <label for="code-prompt">Describe your component:</label>
+          <textarea id="code-prompt" placeholder="e.g., Create a counter component with increment and decrement buttons"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="framework">Framework:</label>
+          <select id="framework">
+            <option value="react">React</option>
+            <option value="vue">Vue</option>
+            <option value="angular">Angular</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="ai-provider">AI Provider:</label>
+          <select id="ai-provider">
+            <option value="gemini">Gemini</option>
+            <option value="openrouter">OpenRouter (Claude 2)</option>
+          </select>
+        </div>
+        
+        <button id="generate-btn">Generate Code</button>
+        <div id="status" class="status-message">Ready to generate code</div>
+      </div>
+      
+      <div class="preview-section">
+        <h2>Live Preview</h2>
+        <iframe id="preview-frame" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
